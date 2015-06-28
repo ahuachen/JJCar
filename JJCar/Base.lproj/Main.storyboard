@@ -1,25 +1,140 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="JJCar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32n-SC-Kqy">
+                                <rect key="frame" x="109" y="502" width="100" height="40"/>
+                                <state key="normal" title="测试小车连接"/>
+                                <connections>
+                                    <action selector="connect:" destination="vXZ-lx-hvc" eventType="touchDown" id="oT8-MA-MIa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa1-Dh-PTr">
+                                <rect key="frame" x="190" y="111" width="125" height="120"/>
+                                <color key="backgroundColor" red="0.98360558712121204" green="0.18395965673233081" blue="0.24938721014280987" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="2IS-Qu-xr6"/>
+                                    <constraint firstAttribute="width" constant="125" id="EYw-ah-uyI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightDown:" destination="vXZ-lx-hvc" eventType="touchDown" id="Nzm-zN-dGA"/>
+                                    <action selector="rightUp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Dbr-ny-E2Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBe-4y-mNR">
+                                <rect key="frame" x="14" y="28" width="300" height="80"/>
+                                <color key="backgroundColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="5bs-WX-EXk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="^">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="upDown:" destination="vXZ-lx-hvc" eventType="touchDown" id="uij-YB-8NW"/>
+                                    <action selector="upUp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qeQ-gn-qaW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEB-fV-fgA">
+                                <rect key="frame" x="14" y="235" width="300" height="80"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Y5c-0u-ERL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="v">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backDown:" destination="vXZ-lx-hvc" eventType="touchDown" id="kMH-Jc-DoO"/>
+                                    <action selector="backUp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Mw0-xc-jBZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="...." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysc-Ys-wO0">
+                                <rect key="frame" x="103" y="369" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="error msg" translatesAutoresizingMaskIntoConstraints="NO" id="AVi-a0-gDO">
+                                <rect key="frame" x="16" y="410" width="288" height="84"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRM-AJ-y7j">
+                                <rect key="frame" x="16" y="111" width="125" height="120"/>
+                                <color key="backgroundColor" red="0.98360558710000001" green="0.1839596567" blue="0.24938721010000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="VcN-aT-ZxZ"/>
+                                    <constraint firstAttribute="height" constant="120" id="jTo-Lj-2vg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftDown:" destination="vXZ-lx-hvc" eventType="touchDown" id="ugY-tX-WMI"/>
+                                    <action selector="leftUp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PRG-t6-LS3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="32n-SC-Kqy" secondAttribute="trailing" constant="100" id="27d-Ux-KMR"/>
+                            <constraint firstItem="QEB-fV-fgA" firstAttribute="top" secondItem="Oa1-Dh-PTr" secondAttribute="bottom" constant="4" id="82r-BE-N1a"/>
+                            <constraint firstItem="ysc-Ys-wO0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="93" id="C0c-NA-xn1"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="32n-SC-Kqy" secondAttribute="bottom" constant="26" id="CtK-U7-8gk"/>
+                            <constraint firstItem="QEB-fV-fgA" firstAttribute="top" secondItem="jRM-AJ-y7j" secondAttribute="bottom" constant="4" id="Iht-fN-hN3"/>
+                            <constraint firstItem="QEB-fV-fgA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="2" id="Jdq-PG-gyz"/>
+                            <constraint firstItem="AVi-a0-gDO" firstAttribute="top" secondItem="ysc-Ys-wO0" secondAttribute="bottom" constant="20" id="Q9Y-S5-1JH"/>
+                            <constraint firstItem="32n-SC-Kqy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="100" id="Qen-m9-VWh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JBe-4y-mNR" secondAttribute="trailing" constant="10" id="UlR-cg-VBN"/>
+                            <constraint firstItem="ysc-Ys-wO0" firstAttribute="top" secondItem="QEB-fV-fgA" secondAttribute="bottom" constant="54" id="Vw0-mF-mgl"/>
+                            <constraint firstItem="JBe-4y-mNR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="2" id="gEq-cW-KCP"/>
+                            <constraint firstItem="Oa1-Dh-PTr" firstAttribute="top" secondItem="JBe-4y-mNR" secondAttribute="bottom" constant="3" id="iDC-5e-1Qs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Oa1-Dh-PTr" secondAttribute="trailing" constant="11" id="lDc-Xe-EwW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ysc-Ys-wO0" secondAttribute="trailing" constant="66" id="oXf-s7-Y1s"/>
+                            <constraint firstItem="32n-SC-Kqy" firstAttribute="top" secondItem="AVi-a0-gDO" secondAttribute="bottom" constant="8" id="qT0-l4-Hy6"/>
+                            <constraint firstItem="jRM-AJ-y7j" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="tuz-W8-hRg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QEB-fV-fgA" secondAttribute="trailing" constant="10" id="wM6-IK-8n2"/>
+                            <constraint firstItem="AVi-a0-gDO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="y1Y-8P-to4"/>
+                            <constraint firstItem="AVi-a0-gDO" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="z1d-rJ-e6e"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="msgTxt" destination="AVi-a0-gDO" id="5lk-ed-UvP"/>
+                        <outlet property="notifyLabel" destination="ysc-Ys-wO0" id="h3E-oo-o1J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="47" y="231"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

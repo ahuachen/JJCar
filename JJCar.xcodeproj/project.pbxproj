@@ -38,6 +38,7 @@
 		B03216DF1B3FB200002D8603 /* JJCarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JJCarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03216E41B3FB200002D8603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B03216E51B3FB200002D8603 /* JJCarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJCarTests.swift; sourceTree = "<group>"; };
+		B03216EF1B3FB8DF002D8603 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = JJCar/MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 		B03216BE1B3FB200002D8603 = {
 			isa = PBXGroup;
 			children = (
+				B03216EF1B3FB8DF002D8603 /* MyPlayground.playground */,
 				B03216C91B3FB200002D8603 /* JJCar */,
 				B03216E21B3FB200002D8603 /* JJCarTests */,
 				B03216C81B3FB200002D8603 /* Products */,
